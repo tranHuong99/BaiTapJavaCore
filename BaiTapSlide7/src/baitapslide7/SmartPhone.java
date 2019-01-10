@@ -5,6 +5,8 @@
  */
 package baitapslide7;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HUONG XINH GAI
@@ -18,21 +20,28 @@ public class SmartPhone extends Product{
     public void setHasCamera(boolean hasCamera){
         this.hasCamera = hasCamera;
     }
-    public int getSin(){
+    public int getSim(){
         return sim;
     }
     public void setSim(int sim){
         this.sim = sim;
     }
     public SmartPhone(){
-        
+        super();
     }
-    public SmartPhone(int add, String ten, double cost, int amount, boolean hasCm, int s_i_m){
-        super(add);
-        super(ten);
-        super(cost);
-        super(amount);
+    public SmartPhone(int id, String name, double price, int quantify, boolean hasCm, int s_i_m){
+        super(id, name, price, quantify);
         hasCamera = hasCm;
         sim = s_i_m;
+    }
+    @Override
+    public void addNew(){
+        super.addNew();
+        Scanner sv = new Scanner(System.in);
+        System.out.println("Kiểm tra hasCamera:(1/0)");
+        int choice = sv.nextInt();
+        this.hasCamera = choice == 1?true:false;
+        System.out.println("Nhập số sim:");
+        this.sim = sc.nextInt();
     }
 }

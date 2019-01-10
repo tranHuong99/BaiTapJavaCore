@@ -41,7 +41,6 @@ public class Product {
         this.quantify = quantify;
     }
     public Product(){
-        
     }
     public Product(int add, String ten, double cost, int amount){
         id = add;
