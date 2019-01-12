@@ -5,10 +5,21 @@
  */
 package baitapslide7;
 
+import java.util.Scanner;
+
 /**
  *
  * @author HUONG XINH GAI
  */
-public class Store {
+public class Store extends Product{
+    public Product[] products;
     
+    public void addProduct(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bạn muốn tìm sản phẩm nào? (Smartphone/Camera): (1/0)");
+        int choice = sc.nextInt();
+        if(choice==1)
+            super.
+        
+    }
 }
