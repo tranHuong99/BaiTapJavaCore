@@ -61,4 +61,10 @@ public class Product {
         System.out.println("Nhập số lượng: ");
         quantify = sc.nextInt();
     }
+    public void printInfo(){
+    	System.out.println("ID: " +id);
+        System.out.println("Name: " +name);
+        System.out.println("Price: " +price);
+        System.out.println("Quantify: " +quantify);
+    }
 }

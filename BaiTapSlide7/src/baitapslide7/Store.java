@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author HUONG XINH GAI
  */
 public class Store extends Product{
-    public static void main(){
+    public static void main(String[] args){
   	Store s = new Store();
     s.start();
    }
@@ -36,17 +36,17 @@ public class Store extends Product{
         System.out.println("Bạn muốn tìm sản phẩm nào? (Smartphone/Camera): (1/0)");
         int choice = sc.nextInt();
         sc.nextLine();
-        Product products = null;
+        Product x = null;
         switch(choice){
             case 0: 
-                products = new Camera();
+                x = new Camera();
                 break;
             case 1:
-                products = new SmartPhone();
+                x = new SmartPhone();
                 break;
         }
-        products.addNew();
-        return products;
+        x.addNew();
+        return x;
     }
 }
 
