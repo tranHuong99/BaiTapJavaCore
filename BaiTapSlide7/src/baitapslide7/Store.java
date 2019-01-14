@@ -12,14 +12,40 @@ import java.util.Scanner;
  * @author HUONG XINH GAI
  */
 public class Store extends Product{
+    public static void main(){
+  	Store s = new Store();
+    s.start();
+   }
     public Product[] products;
-    
+    Scanner sc = new Scanner(System.in);
+    public void start(){
+    	System.out.println("Nhap vao so luong san pham: ");
+       	int n = sc.nextInt();
+      	products = new Product[n];
+      	for(int i=0;i<n;i++){
+        	products[i] = addProduct();
+        }
+        System.out.println("Thong tin san pham: ");
+    }
+    public void printInfo(){
+    	for(int i=0;i<products.length;i++){
+        	products[i].printInfo();
+        }
+    }
     public void addProduct(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("Bạn muốn tìm sản phẩm nào? (Smartphone/Camera): (1/0)");
         int choice = sc.nextInt();
-        if(choice==1)
-            super.
-        
+        sc.nextLine();
+        Product x;
+        switch(choice){
+            case 0: 
+                x = new Camera();
+                break;
+            case 1:
+                x = new SmartPhone();
+        }
+        products.addNew();
+        return products;
     }
 }
+
