@@ -32,17 +32,18 @@ public class Store extends Product{
         	products[i].printInfo();
         }
     }
-    public void addProduct(){
+    public Product addProduct(){
         System.out.println("Bạn muốn tìm sản phẩm nào? (Smartphone/Camera): (1/0)");
         int choice = sc.nextInt();
         sc.nextLine();
-        Product x;
+        Product products = null;
         switch(choice){
             case 0: 
-                x = new Camera();
+                products = new Camera();
                 break;
             case 1:
-                x = new SmartPhone();
+                products = new SmartPhone();
+                break;
         }
         products.addNew();
         return products;
