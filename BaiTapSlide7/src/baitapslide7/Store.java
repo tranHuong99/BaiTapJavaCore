@@ -27,13 +27,14 @@ public class Store extends Product{
         }
         System.out.println("Thong tin san pham: ");
     }
+    @Override
     public void printInfo(){
     	for(int i=0;i<products.length;i++){
         	products[i].printInfo();
         }
     }
     public Product addProduct(){
-        System.out.println("Bạn muốn tìm sản phẩm nào? (Smartphone/Camera): (1/0)");
+        System.out.println("Bạn muốn nhập sản phẩm nào? (Smartphone/Camera): (1/0)");
         int choice = sc.nextInt();
         sc.nextLine();
         Product x = null;
@@ -48,5 +49,19 @@ public class Store extends Product{
         x.addNew();
         return x;
     }
+    void listProduct(){
+        System.out.println("Nhập số lượng sản phẩm: ");
+        int n = sc.nextInt();
+        System.out.printf("%-5s%-20s%", "STT","Ten SP");
+        for(int i=0;i<=n;i++){
+            System.out.printf("%5d%20s", i++, products[i].getName()); 
+        }
+    }
+    void search(String name){
+	for(int i=0 ; i < products.length ;i++){
+            if(products[i].getName().equals(name)){
+                products[i].printInfo();
+            }
+        }
+    }
 }
-
