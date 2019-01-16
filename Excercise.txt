@@ -1,4 +1,4 @@
-﻿*Chia thành 5 class
+﻿*Chia thành 7 class
 1.Class Animal gồm:
 -Thuộc tính: 
    +String name;
@@ -26,4 +26,5 @@
 -Hàm listAnimal() hiển thị danh sách dưới dạng bảng
 -Hàm searchAnimal() tìm kiếm con vật theo giá
 6. Class Menu để người dùng có thể dễ dàng chọn mục cần làm.
+7. Class Run để chạy chương trình chính
    
