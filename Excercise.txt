@@ -1,0 +1,29 @@
+﻿*Chia thành 5 class
+1.Class Animal gồm:
+-Thuộc tính: 
+   +String name;
+   +Double price;
+-Phương thức: +void​ ​addNew();​ ​Getter/Setter
+              +Contrucstor (contrustor mặc định và contrucstor đầy đủ tham số) 
+2.Class Dog kế thừa class Animal gồm:
+-Thuộc tính: 
+   +String suaGauGau;
+-Phương thức: +override phương thức addNew() để nhập thông tin cho Dog; Getter/Setter 
+              + Contrucstor (contrustor mặc định và contrucstor đầy đủ tham số)  
+3.Class Cat kế thừa class Animal gồm:
+-Thuộc tính: 
+   +String keuMeoMeo;
+-Phương thức: +override phương thức addNew() để nhập thông tin cho Cat; Getter/Setter 
+              + Contrucstor (contrustor mặc định và contrucstor đầy đủ tham số)
+4.Class Mouse kế thừa class Animal gồm:
+-Thuộc tính: 
+   +String keuChitChit;
+-Phương thức: +override phương thức addNew() để nhập thông tin cho Mouse; Getter/Setter 
+              + Contrucstor (contrustor mặc định và contrucstor đầy đủ tham số)
+5. Class List_Ani kế thừa class Animal gồm:
+-Hàm addAnimal() nhập thông tin một con vật
+-Hàm printAnimal() in thông tin một con vật
+-Hàm listAnimal() hiển thị danh sách dưới dạng bảng
+-Hàm searchAnimal() tìm kiếm con vật theo giá
+6. Class Menu để người dùng có thể dễ dàng chọn mục cần làm.
+   
