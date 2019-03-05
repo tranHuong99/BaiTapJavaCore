@@ -49,36 +49,26 @@ public class Student {
         stCode = sc.nextLine();
         System.out.print("Point: ");
         point = sc.nextDouble();
-    }
-    public void showInfo(){
         if(point<=0 || point >10)
             System.out.println("Invalid information! Please re-enter!");
+        System.out.print("Point: ");
+        point = sc.nextDouble();
+    }
+    public void showInfo(){
         if(point>0 && point<5){
-            System.out.println("List of underperforming students:");
-            System.out.println("Name:"+name);
-            System.out.println("Code:"+stCode);
-            System.out.println("Point:"+point);
+            System.out.println("==>underperforming student!:");
             System.out.println();
         }
         else if(point>=5 && point <7){
-            System.out.println("List of average students:");
-            System.out.println("Name:"+name);
-            System.out.println("Code:"+stCode);
-            System.out.println("Point:"+point);
+            System.out.println("==>average student!");
             System.out.println();
         }
         else if(point >=7 && point <8){
-            System.out.println("List of good students:");
-            System.out.println("Name:"+name);
-            System.out.println("Code:"+stCode);
-            System.out.println("Point:"+point);
+            System.out.println("==>good student!");
             System.out.println();
         }
         else{
-            System.out.println("List of excellent students:");
-            System.out.println("Name:"+name);
-            System.out.println("Code:"+stCode);
-            System.out.println("Point:"+point);
+            System.out.println("==>excellent student!");
             System.out.println();
         }
     }
