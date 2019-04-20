@@ -13,9 +13,9 @@ import java.util.Scanner;
  */
 public class Product {
     public int id;
-    public String name;
-    public double price;
-    public int quantify;
+    public String name; //tên
+    public double price; //giá
+    public int quantify; //số lượng
     public int getId(){
         return id;
     }
@@ -47,7 +47,6 @@ public class Product {
         name = ten;
         price = cost;
         quantify = amount;
-        
     }
     Scanner sc = new Scanner(System.in);
     public void addNew(){
