@@ -44,7 +44,6 @@ public class SimpleVim {
                 System.out.println(f.createNewFile());
             }
             catch(Exception e){
-                e.printStackTrace();
             }
         }
     }
@@ -53,15 +52,13 @@ public class SimpleVim {
         File f = new File(path);
         byte bWrite [] = {11,21,3,40,5};
         try{
-            FileOutputStream fos = new FileOutputStream("test.txt");
-            for(int x = 0; x < bWrite.length ; x++) {      
-                fos.write( bWrite[x] );
-            }   // writes the bytes   }   
-            fos.close(); 
+            try (FileOutputStream fos = new FileOutputStream("test.txt")) {
+                for(int x = 0; x < bWrite.length ; x++) {
+                    fos.write( bWrite[x] );
+                }   // writes the bytes   }   
+            } 
         } catch(FileNotFoundException e) {
-            e.printStackTrace(); 
         } catch(IOException e){
-            e.printStackTrace();
         }
     }
 
