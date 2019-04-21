@@ -48,6 +48,7 @@ public class CustomerManager extends Customer{
         System.out.print("Nhập age: ");
         this.setAge(sc.nextInt());
     }
+    @Override
     public Customer search(int id){
         boolean found = false;
         for(int i=0;i<this.listCustomer.length;i++){

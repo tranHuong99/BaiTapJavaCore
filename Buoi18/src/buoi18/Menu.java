@@ -5,6 +5,7 @@
  */
 package buoi18;
 
+import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -13,6 +14,7 @@ import java.util.Scanner;
  */
 public class Menu {
     public void Menu(){
+        File f = new File("D:\\input.txt");
         Customer cust = new CustomerManager();
         Scanner sc = new Scanner(System.in);
         System.out.println("=====MENU=====");
@@ -24,7 +26,8 @@ public class Menu {
         System.out.print("Mời bạn chọn: ");
         int n = sc.nextInt();
         switch(n){
-            case 1: cust.
+            case 1: cust.load(f);
+                break;
             case 2: {
                 System.out.println("Nhập vào số lượng khách hàng:");
                 int m = sc.nextInt();
@@ -34,6 +37,7 @@ public class Menu {
                 }
                 break;
             }
+            case 3: cust.search();
         }
     }
 }

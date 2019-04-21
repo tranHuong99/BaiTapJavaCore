@@ -5,6 +5,8 @@
  */
 package buoi18;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 
 /**
@@ -53,4 +55,9 @@ public abstract class Customer implements Serializable{
         return "Customer{Name = " +this.getName() + "address = " +this.getAddress() + "age = " +this.getAge() +"}";
     }
     public abstract void add();
+    public abstract boolean load() throws IOException;
+    public abstract Customer search(int id);
+    void load(File f) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
