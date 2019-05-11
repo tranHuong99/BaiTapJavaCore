@@ -25,7 +25,7 @@ public class StudentManager {
         String id = input.inputId();
         System.out.println("Name > ");
         String name = input.inputId();
-        System.out.println("Mark > ");
+        System.out.println("Dob > ");
         String mark = input.inputId();
         System.out.println("Phone > ");
         String phone = input.inputId();
@@ -57,5 +57,6 @@ public class StudentManager {
                 }
             }
         }
+        return arr;
     }
 }
