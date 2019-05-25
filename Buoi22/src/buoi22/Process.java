@@ -54,7 +54,7 @@ public class Process {
                 "where d.ten = ?";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, name);
-        return ps.executeQuery();
+        ps.executeQuery();
     }
     public ResultSet ex6() throws Exception{
         DBConnector db = new DBConnector();
