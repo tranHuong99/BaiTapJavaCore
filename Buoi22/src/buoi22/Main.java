@@ -36,18 +36,14 @@ public class Main {
                 int choose = sc.nextInt();
                 do{
                         switch(choose){
-                        case 1:
-                        {
+                        case 1:{
                             //select sothe, ten, khoa from DOCGIA order by khoa asc;2
                             ResultSet rs = stmt.executeQuery("SELECT sothe,ten,khoa FROM DOCGIA ORDER BY KHOA ASC");
                             while(rs.next()){
                                 System.out.println(rs.getString("sothe") +"      "+ rs.getString("ten") +"--"+rs.getString("khoa"));
-                            }
-                            
-                        }
-                        break;
-                        case 2:
-                        {
+                            }     
+                        }break;
+                        case 2:{
                             try{
                                 Process p = new Process();
                                 System.out.print("Nhập tên sách: ");
@@ -55,7 +51,24 @@ public class Main {
                                 sc.nextLine();
                                 System.out.print("Nhập ngày mượn (dd/mm/yyyy): ");
                                 String date = sc.nextLine();
-                                ResultSet rs = p.ex6(name, date);
+                                ResultSet rs = p.ex2(name, date);
+                                while(rs.next()){
+                                    System.out.println(rs.getString(1));
+                                }
+                            }
+                            catch(Exception e){
+                                e.printStackTrace();
+                            }    
+                        }break;
+                        case 3:{
+                            try{
+                                Process p = new Process();
+                                System.out.print("Nhập ngày bắt đầu (dd/mm/yyyy): ");
+                                String date1 = sc.nextLine();
+                                sc.nextLine();
+                                System.out.print("Nhập ngày kết thúc (dd/mm/yyyy): ");
+                                String date2 = sc.nextLine();
+                                ResultSet rs = p.ex3(date1, date2);
                                 while(rs.next()){
                                     System.out.println(rs.getString(1));
                                 }
@@ -63,9 +76,44 @@ public class Main {
                             catch(Exception e){
                                 e.printStackTrace();
                             }
-                            
-                        }
-                        break;
+                        }break;
+                        case 4:{
+                            try{
+                                Process p = new Process();
+                                System.out.println("Danh sách các sách KHÔNG AI MƯỢN: ");
+                                ResultSet rs = p.ex4();
+                                while(rs.next()){
+                                    System.out.println(rs.getString(1));
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                        }break;
+                        case 5:{
+                            try{
+                                Process p = new Process();
+                                System.out.print("Nhập tên đọc giả cần tìm: ");
+                                String name = sc.nextLine();
+                                ResultSet rs = p.ex5(name);
+                                while(rs.next()){
+                                    System.out.println(rs.getString(1));
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                        }break;
+                        case 6:{
+                            try{
+                                Process p = new Process();
+                                System.out.println("Danh sách TÊN, SỐ THẺ các độc giả chưa trả sách: ");
+                                ResultSet rs = p.ex6();
+                                while(rs.next()){
+                                    System.out.println(rs.getString(1));
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                        }break;
                     }
                 }
                 while(choose!=7);
