@@ -27,7 +27,7 @@ public class StudentManager extends Manager{
         for(int i=0;i<this.list.length;i++){
             if(this.list[i]==null)
                 continue;
-            if(this.get)
+            if(this.ge)
             System.out.println(this.list[i]);
         }
     }

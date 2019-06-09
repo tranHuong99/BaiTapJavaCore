@@ -18,9 +18,11 @@ public class Main {
         try{
             Students st = new Students();
             questions qt = new questions();
+            student_questions stq = new student_questions();
             st.login();
             if(st.status(st.getEmail(), st.getPass())){
                 System.out.println("LOGIN SUCCESS! PRESS ANY KEY TO START QUIZ");
+                System.out.println();
                 ResultSet rs = qt.ContentQuestions();
                 int i=0, count=0;
                 while(rs.next()){
@@ -40,7 +42,22 @@ public class Main {
                     else
                         System.out.println("Wrong!");
                 }
-                System.out.printf("You answered %d questions correctly!", count);
+                System.out.println();
+                System.out.println("Congratulation!");
+                System.out.printf("Your result: %d/5!\n", count);
+                System.out.print("See details (Y/N): ");
+                String see = sc.nextLine();
+                ResultSet rs1 = stq.st_questions();
+                if(see.equals("Y")){
+                    while(rs1.next()){
+                        i++;
+                        System.out.printf("Question %d/5\n", i);
+                        
+                    }
+                }
+                else{
+                    System.out.println("Do you want to TRY IT AGAIN or LOG OUT? (T/O): ");
+                }
             }
             else{
                 System.out.println("LOGIN FAILED!");
