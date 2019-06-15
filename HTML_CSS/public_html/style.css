@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    color: #CC0033;
+    font-family: Tahoma;
+    font-size: 30px;
+}
+table{
+    margin: auto;
+    padding: auto;
+    font-family: Tahoma;
+    font-size: 15px;
+    border-color: #CC0033;
+}
+p{
+    font-size: 20px;
+    font-family: Tahoma;
+}
