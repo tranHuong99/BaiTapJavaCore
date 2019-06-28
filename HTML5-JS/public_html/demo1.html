@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script LANGUAGE="JavaScript">
+            function a_cong_b(form){
+                var a = eval(form.a.value);
+                var b = eval(form.b.value);
+                var c = a+b;
+                form.ans.value = c;
+            }
+            function a_tru_b(form){
+                var a = eval(form.a.value);
+                var b = eval(form.b.value);
+                var c = a-b;
+                form.ans.value = c;
+            }
+            function a_nhan_b(form){
+                var a = eval(form.a.value);
+                var b = eval(form.b.value);
+                varc = a*b;
+                form.ans.value = c;
+            }
+            function a_chia_b(form){
+                var a = eval(form.a.value);
+                var b = eval(form.b.value);
+                var c = a/b;
+                form.ans.value = c;
+            }
+        </script>
+        <title>Máy tính đơn giản</title>
+    </head>
+    <body>
+        <form name="formx">
+            <p>
+                <input type="text" size="4" value="12" name="a"/>
+                <input type="button" value=" + " onclick="a_cong_b(this.form)"/>
+                <input type="button" value=" - " onclick="a_cong_b(this.form)"/>
+                <input type="button" value=" * " onclick="a_cong_b(this.form)"/>
+                <input type="button" value=" / " onclick="a_cong_b(this.form)"/>
+                <input type="text" size="4" value="12" name="a"/>
+                <input type="number" value="0" name="ans" size="9"/>
+            </p>
+        </form>
+    </body>
+</html>

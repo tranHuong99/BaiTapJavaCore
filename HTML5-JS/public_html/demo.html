@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3 id="welcome" style="color: red">
+            TODO write content
+        </h3>
+        
+        <form>
+            <input type="text" id="name" /> <br/><br/>
+<!--            <input type="password"> <br/>
+            Nam <input type="radio" name="gender" /> Nữ<input type="radio" name="gender" />
+            <br/>
+            Sở thích: <br/>
+            <input type="checkbox" /> Code <br/>
+            <input type="checkbox" /> Game <br/>
+            <input type="checkbox" /> Đọc sách <br/>
+            <input type="checkbox" /> Thể thao <br/>
+            Địa chỉ <br/>
+            <select>
+                <option>Hà nội</option>
+                <option>HCM</option>
+                <option>Huế</option>
+                <option>Đà nẵng</option>
+            </select>
+            <br/>
+            <textarea cols="40" rows="5"></textarea>-->
+        </form>
+        <button onmouseover="move()" onclick="goGoogle()" id="btn">Click here</button>    
+        
+            
+        <!--<script src="main.js"></script>-->
+        <script>
+            
+            
+            
+            
+            function move() {
+                var eleBtn = document.getElementById("btn");
+                var posX = Math.round(Math.random() * 200);
+                var posY = Math.round(Math.random() * 300);
+                eleBtn.style.position = 'absolute';
+                eleBtn.style.top = posX + 'px';
+                eleBtn.style.left = posY + 'px';
+            }
+            function goGoogle() {
+                var eleInput = document.getElementById("name");
+                var eleWelcome = document.getElementById("welcome");
+                
+                eleWelcome.innerHTML = "Hello, " + eleInput.value;
+//                eleWelcome.style = "color: blue";
+                eleWelcome.style.color = "blue";
+//                alert("Hello, " + );
+            }
+            
+            
+//            alert("Hello");
+//            var rs = confirm("Are you sure?");
+//            document.write(rs);
+//            console.log('Ng dung da chon ', rs);
+            
+            
+            function sum(a, b) {
+                return a + b;
+            }
+            
+            
+            console.log(sum(3,4));
+        </script>
+    </body>
+</html>
