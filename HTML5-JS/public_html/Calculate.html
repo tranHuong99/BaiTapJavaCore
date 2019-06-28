@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CALCULATE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Calculate.css"/>
+    </head>
+    <body>
+        <div>
+            <form>
+                <div><input type="text" value="0" id="rs"/></div>
+                <div id="cal">
+                    <div class="row">
+                        <div class="row"><input class="button" type="button" value=" + " onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value=" - " onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value=" * " onclick="clickBtn(this)"/></div>
+                        <div class="row" style="margin-right: 5px"><input class="button" type="button" value=" / " onclick="clickBtn(this)"/></div>
+                    </div><br/>
+                    <div class="row">
+                        <div class="row"><input class="button" type="button" value="7" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="8" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="9" onclick="clickBtn(this)"/></div><br>
+                        <div class="row"><input class="button" type="button" value="4" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="5" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="6" onclick="clickBtn(this)"/></div><br>
+                        <div class="row"><input class="button" type="button" value="1" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="2" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="3" onclick="clickBtn(this)"/></div><br>
+                        <div class="row"><input class="button" type="button" value="0" onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" type="button" value="." onclick="clickBtn(this)"/></div>
+                        <div class="row"><input class="button" id="reset" type="reset" value="AC" onclick="clickBtn(this)"/></div><br>
+                    </div>
+                    <div class="row">
+                        <input class="button" id="last" type="button" value="="/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="Calculate.js"></script>
+    </body>
+</html>

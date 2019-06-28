@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 28, 2019, 3:26:22 PM
+    Author     : HUONG XINH GAI
+*/
+body{
+    margin: 0;
+    padding: 0;
+}
+#rs{
+    background-color: black; 
+    height: 30px;
+    width: 227px;
+    text-align: right;
+    color: white;
+}
+#cal{
+    float: left;
+    background-color: #d3d3d3;
+    
+}
+.row{
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+.button{
+    width: 50px;
+    height: 30px;
+}
+.button:hover{
+    background-color: #b8b2a6;
+}
+#reset{
+    background-color: #ff0b55;
+    color: white;
+}
+#reset:hover{
+    background-color: #d61d4e;
+}
+#last{
+    margin-bottom: 5px;
+    height: 128px;
+    background-color: #21aa93;
+    color: white;
+}
+#last:hover{
+    background-color: #01676b;
+}
+
