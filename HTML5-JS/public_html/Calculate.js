@@ -31,7 +31,7 @@ function clickBtn(obj){
         str_ketqua = '';
     }
     //HTML của phím bấm
-    var type = obj.innerHTML;
+    var type = obj.value;
     //nhóm số
     if(type=='0' || type=='1' || type=='2' || type=='3' || type=='4' || type=='5' || type=='6' || type=='7' || type=='8' || type=='9' || type=='.')
     {
@@ -46,7 +46,7 @@ function clickBtn(obj){
         if(doi_phep_tinh){
             mang_pt[mang_pt_index-1] = type;
             //xử lý hiển thị
-            ketqua.value = ketqua.value.substring(ketqua.value.length)+type;
+            ketqua.value = ketqua.value.substring(0, ketqua.value.length)+type;
         }
         //chưa bấm phép tính
         else{
@@ -63,8 +63,19 @@ function clickBtn(obj){
         str_ketqua = '';
         phim_moi = '';
     }
-    console.log(mang_so);
-    console.log(mang_pt);
+    //nhóm tính kết quả
+    else{
+        if(type=='='){
+            if(phim_moi!=''){
+                mang_so[mang_so_index] = parseFloat(phim_moi);
+            }
+        }
+        else{
+            phim_moi = '';
+            //thay đổi kết quả hiển thị
+            ketqua.value = str_ketqua + phim_moi;
+        }
+    }
 }
 
 

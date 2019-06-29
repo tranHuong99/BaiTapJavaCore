@@ -1,80 +1,291 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h3 id="welcome" style="color: red">
-            TODO write content
-        </h3>
-        
-        <form>
-            <input type="text" id="name" /> <br/><br/>
-<!--            <input type="password"> <br/>
-            Nam <input type="radio" name="gender" /> Nữ<input type="radio" name="gender" />
-            <br/>
-            Sở thích: <br/>
-            <input type="checkbox" /> Code <br/>
-            <input type="checkbox" /> Game <br/>
-            <input type="checkbox" /> Đọc sách <br/>
-            <input type="checkbox" /> Thể thao <br/>
-            Địa chỉ <br/>
-            <select>
-                <option>Hà nội</option>
-                <option>HCM</option>
-                <option>Huế</option>
-                <option>Đà nẵng</option>
-            </select>
-            <br/>
-            <textarea cols="40" rows="5"></textarea>-->
-        </form>
-        <button onmouseover="move()" onclick="goGoogle()" id="btn">Click here</button>    
-        
-            
-        <!--<script src="main.js"></script>-->
-        <script>
-            
-            
-            
-            
-            function move() {
-                var eleBtn = document.getElementById("btn");
-                var posX = Math.round(Math.random() * 200);
-                var posY = Math.round(Math.random() * 300);
-                eleBtn.style.position = 'absolute';
-                eleBtn.style.top = posX + 'px';
-                eleBtn.style.left = posY + 'px';
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Add Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- <h1 class="page-header">
+                    Thêm mới Admin
+                </h1> -->
+                <ol class="breadcrumb">
+                    <li class="active" style="margin-right: 5px;margin-left: 5px;">
+                        <a href="${pageContext.request.contextPath}/admin/home.htm?page=1">
+                            <i class="fa fa-list"></i>
+                            <span>Admin</span>
+                        </a>
+                    </li>/
+                    <li class="active" style="margin-left: 5px;">
+                        <i class="fa fa-file"></i> Thêm mới
+                    </li>
+                </ol>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="" action="" method="POST" enctype="multipart/form-data">
+
+                    <!-- Hoten -->
+
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Họ và tên:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control col-md-10" id="UserName" placeholder="Nguyen van A"
+                                name="name">
+                            <span class="has-error" id="nameErr"></span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Email: </label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control col-md-10" id="email" placeholder="abc@gmail.com"
+                                name="email">
+                            <span class="has-error" id="emailErr"></span>
+                        </div>
+                    </div>
+
+
+                    <!-- Website -->
+                    <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Website: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control col-md-10" id="website" placeholder="www.abcvn.edu"
+                                name="website">
+                            <span class="has-error" id="WebsiteErr"></span>
+                        </div>
+                    </div>
+                    <!-- adrress -->
+
+                    <!-- <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Address:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control col-md-10" id="Address"
+                                placeholder="so 77 ngo 68 trieu khuc thanh xuan HN" name="address">
+                            <span class="has-error" id="addressErr"></span>
+                        </div>
+                    </div> -->
+
+                    <!-- SDT
+
+                    <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">SDT:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control col-md-10" id="Phone" name="phone"
+                                placeholder="0912345678" value="phone" required>
+                            <span class="has-error" id="phoneErr"></span>
+                        </div>
+                    </div> -->
+                    <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Message:</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control col-md-10" id="Message" name="message"
+                                value="message" required></textarea>
+
+                            <span class="has-error" id="MessageErr"></span>
+                        </div>
+                    </div>
+                    <div id="box" style="color: blue">
+                        Box domo blalallalallalallalalalal
+                    </div>
+
+                    <!-- password -->
+
+                    <!-- <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control col-md-10" id="Password1" name="password"
+                                placeholder="*************">
+                            <span class="has-error" id="Pass1Err"></span>
+                        </div>
+                    </div> -->
+
+                    <!-- config password -->
+                    <!-- 
+                    <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Config Password:</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control col-md-10" id="Password2" name="re_password"
+                                placeholder="*************" required>
+                            <span class="has-error" id="Pass2Err"></span>
+                        </div>
+                    </div> -->
+
+                    <!-- Level -->
+
+                    <!-- <div class="form-group row">
+                        <label for="inputGia" class="col-sm-2 col-form-label">Level:</label>
+                        <div class="col-sm-8">
+                            <select class="form-control col-md-10" name="level">
+                                <option value="1">CTV</option>
+                                <option value="2">Admin</option>
+                            </select>
+
+                        </div>
+                    </div> -->
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-9">
+                            <button type="submit" class="btn btn-primary" style="float:right"
+                                onclick="Savefuntion()">Save</button>
+                            <button type="submit" class="btn btn-primary" style="float:right; margin-right: 10px"
+                                onclick="clickfuntion()">click</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        function reloadFunction() {
+            location.reload();
+        }
+
+        function clickfuntion() {
+            var boxEle = document.getElementById("box");
+            boxEle.style.color = "red"
+            boxEle.innerHTML = "noi dung mới"
+        }
+        // element
+        var UserName = document.getElementById('UserName');
+        var Email = document.getElementById('email');
+        // var Password1 = document.getElementById('Password1');
+        // var Password2 = document.getElementById('Password2');
+        // var Phone = document.getElementById('Phone');
+        var Address = document.getElementById('Address');
+        var Message = document.getElementById('Message');
+        var Website = document.getElementById("website");
+
+
+        //error
+        var UsernameErr = document.getElementById('nameErr');
+        var EmailErr = document.getElementById('emailErr');
+        var AddressErr = document.getElementById('addressErr');
+        var MessageErr = document.getElementById("MessageErr");
+        var WebsiteErr = document.getElementById("WebsiteErr");
+
+        // var PhoneErr = document.getElementById('phoneErr');
+        // var Password1Err = document.getElementById('Pass1Err');
+        // var Password2Err = document.getElementById('Pass2Err');
+
+        function Savefuntion() {
+            var name = UserName.value;
+            var email = Email.value;
+            var message = Message.value;
+            var website = Website.value;
+            // var pass1 = Password1.value;
+            // var pass2 = Password2.value;
+            // var phone = Phone.value;
+            // var address = Address.value;
+
+
+            // Name 
+            if (name == "") {
+                UsernameErr.innerText = "This field is required";
+                UserName.style.backgroundColor = "#e89f9f";
+                UserName.style.border = "2px solid red";
+            } else {
+                UsernameErr.innerText = "";
+                UserName.style.backgroundColor = "#fff";
+                UserName.style.border = "1px solid gray";
             }
-            function goGoogle() {
-                var eleInput = document.getElementById("name");
-                var eleWelcome = document.getElementById("welcome");
-                
-                eleWelcome.innerHTML = "Hello, " + eleInput.value;
-//                eleWelcome.style = "color: blue";
-                eleWelcome.style.color = "blue";
-//                alert("Hello, " + );
+
+            //Email
+            if (email == "") {
+                EmailErr.innerText = "This field is required";
+                Email.style.backgroundColor = "#e89f9f";
+                Email.style.border = "2px solid red";
+            } else {
+                EmailErr.innerText = "";
+                Email.style.backgroundColor = "#fff";
+                Email.style.border = "1px solid gray";
             }
-            
-            
-//            alert("Hello");
-//            var rs = confirm("Are you sure?");
-//            document.write(rs);
-//            console.log('Ng dung da chon ', rs);
-            
-            
-            function sum(a, b) {
-                return a + b;
+
+            //Message
+
+            if (message == "") {
+                MessageErr.innerText = "This field is required";
+                Message.style.backgroundColor = "#e89f9f";
+                Message.style.border = "2px solid red";
+            } else {
+                MessageErr.innerText = "";
+                Message.style.backgroundColor = "#fff";
+                Message.style.border = "1px solid gray";
             }
-            
-            
-            console.log(sum(3,4));
-        </script>
-    </body>
+
+            //Website
+            if (website == "") {
+                WebsiteErr.innerText = "This field is required";
+                Website.style.backgroundColor = "#e89f9f";
+                Website.style.border = "2px solid red";
+            } else {
+                Website.innerText = "";
+                Website.style.backgroundColor = "#fff";
+                Website.style.border = "1px solid gray";
+            }
+
+
+            // //Phone
+            // if (phone == "") {
+            //     PhoneErr.innerText = "This field is required";
+            //     Phone.style.backgroundColor = "#e89f9f";
+            //     Phone.style.border = "2px solid red";
+            // } else {
+            //     PhoneErr.innerText = "";
+            //     Phone.style.backgroundColor = "#fff";
+            //     Phone.style.border = "1px solid gray";
+            // }
+
+            // //Address
+            // if (address == "") {
+            //     AddressErr.innerText = "This field is required";
+            //     Address.style.backgroundColor = "#e89f9f";
+            //     Address.style.border = "2px solid red";
+            // } else {
+            //     AddressErr.innerText = "";
+            //     Address.style.backgroundColor = "#fff";
+            //     Address.style.border = "1px solid gray";
+            // }
+            // //Pass1
+            // if (pass1 == "") {
+            //     Password1Err.innerText = "This field is required";
+            //     Password1.style.backgroundColor = "#e89f9f";
+            //     Password1.style.border = "2px solid red";
+            // } else {
+            //     Password1Err.innerText = "";
+            //     Password1.style.backgroundColor = "#fff";
+            //     Password1.style.border = "1px solid gray";
+            // }
+            // //Pass2
+            // if (pass2 == "") {
+            //     Password2Err.innerText = "This field is required";
+            //     Password2.style.backgroundColor = "#e89f9f";
+            //     Password2.style.border = "2px solid red";
+            // } else {
+            //     Password2Err.innerText = "";
+            //     Password2.style.backgroundColor = "#fff";
+            //     Password2.style.border = "1px solid gray";
+            // }
+
+
+        }
+    </script>
+
+</body>
+
 </html>
